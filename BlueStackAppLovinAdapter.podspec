@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name = 'BlueStackAppLovinAdapter'
-s.version = '4.3.0.1'
+s.version = '4.4.8.0'
 s.static_framework = true
 s.license = 'MIT'
 s.summary = 'BlueStack adapter used for mediation with the AppLovin MAX SDK'
@@ -14,7 +14,7 @@ s.documentation_url = 'https://developers.bluestack.app/ios/mediation-adapters/a
 s.vendored_frameworks = "BlueStackAppLovinAdapter.xcframework"
 s.ios.deployment_target = '12.2'
 
-s.dependency 'BlueStack-SDK/Core', '4.3.0'
-s.dependency 'AppLovinSDK'
+s.dependency 'BlueStack-SDK', '4.4.8'
+s.dependency 'AppLovinSDK', '12.6.1'
 
 end

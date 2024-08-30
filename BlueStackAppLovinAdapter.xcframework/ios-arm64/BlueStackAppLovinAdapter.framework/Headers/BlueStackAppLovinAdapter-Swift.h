@@ -282,6 +282,12 @@ SWIFT_CLASS("_TtC24BlueStackAppLovinAdapter25BlueStackMediationAdapter")
 @end
 
 @protocol MAAdapterResponseParameters;
+@protocol MANativeAdAdapterDelegate;
+
+@interface BlueStackMediationAdapter (SWIFT_EXTENSION(BlueStackAppLovinAdapter)) <MANativeAdAdapter>
+- (void)loadNativeAdForParameters:(id <MAAdapterResponseParameters> _Nonnull)parameters andNotify:(id <MANativeAdAdapterDelegate> _Nonnull)delegate;
+@end
+
 @class MAAdFormat;
 @protocol MAAdViewAdapterDelegate;
 
