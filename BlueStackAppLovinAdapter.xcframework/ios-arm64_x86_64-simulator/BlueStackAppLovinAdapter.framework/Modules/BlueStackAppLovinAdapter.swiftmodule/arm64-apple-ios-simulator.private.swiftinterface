@@ -32,6 +32,9 @@ extension BlueStackAppLovinAdapter.BlueStackMediationAdapter : AppLovinSDK.MARew
   @objc dynamic public func loadRewardedAd(for parameters: AppLovinSDK.MAAdapterResponseParameters, andNotify delegate: AppLovinSDK.MARewardedAdapterDelegate)
   @objc dynamic public func showRewardedAd(for parameters: AppLovinSDK.MAAdapterResponseParameters, andNotify delegate: AppLovinSDK.MARewardedAdapterDelegate)
 }
+extension BlueStackAppLovinAdapter.BlueStackMediationAdapter : AppLovinSDK.MANativeAdAdapter {
+  @objc dynamic public func loadNativeAd(for parameters: AppLovinSDK.MAAdapterResponseParameters, andNotify delegate: AppLovinSDK.MANativeAdAdapterDelegate)
+}
 @_inheritsConvenienceInitializers @objc public class BlueStackKeys : ObjectiveC.NSObject {
   @objc public static let latitude: Swift.String
   @objc public static let longitude: Swift.String
