@@ -12,7 +12,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git", exact: "12.6.1"),
-        .package(url: "https://github.com/azerion/BlueStackSDK", exact: "4.4.8"),
+        .package(url: "https://github.com/azerion/BlueStackSDK.git", exact: "4.4.8"),
     ],
     targets: [
         .binaryTarget(name: "BlueStackAppLovinAdapter", path: "BlueStackAppLovinAdapter.xcframework")
