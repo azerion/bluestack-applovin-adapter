@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "BlueStackAppLovinAdapter",
+    platforms: [.iOS(.v12)],
     products: [
         .library(
             name: "BlueStackAppLovinAdapter",
@@ -16,11 +17,12 @@ let package = Package(
     ],
     targets: [
         .target(name: "BlueStackAppLovinAdapterTarget",
-                dependencies: [
-                    .product(name: "BlueStackSDK", package: "BlueStackSDK", condition: .when(platforms: [.iOS])),
-                    .product(name: "AppLovinSDK", package: "AppLovin-MAX-Swift-Package", condition: .when(platforms: [.iOS]))
-                ],
-               path: "BlueStackAppLovinAdapterWrapper"),
+                        dependencies: [
+                            .product(name: "BlueStackSDK", package: "BlueStackSDK", condition: .when(platforms: [.iOS])),
+                            .product(name: "AppLovinSDK", package: "AppLovin-MAX-Swift-Package", condition: .when(platforms: [.iOS])),
+                            .target(name: "BlueStackAppLovinAdapter", condition: .when(platforms: [.iOS]))
+                        ],
+                       path: "BlueStackAppLovinAdapterWrapper"),
         .binaryTarget(name: "BlueStackAppLovinAdapter", path: "BlueStackAppLovinAdapter.xcframework")
     ]
 )
