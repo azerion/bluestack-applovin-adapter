@@ -8,13 +8,19 @@ let package = Package(
     products: [
         .library(
             name: "BlueStackAppLovinAdapter",
-            targets: ["BlueStackAppLovinAdapter"]),
+            targets: ["BlueStackAppLovinAdapterTarget"]),
     ],
     dependencies: [
         .package(url: "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git", exact: "12.6.1"),
         .package(url: "https://github.com/azerion/BlueStackSDK.git", exact: "4.4.8"),
     ],
     targets: [
+        .target(name: "BlueStackAppLovinAdapterTarget",
+                dependencies: [
+                    .product(name: "BlueStackSDK", package: "BlueStackSDK", condition: .when(platforms: [.iOS])),
+                    .product(name: "AppLovinSDK", package: "AppLovin-MAX-Swift-Package", condition: .when(platforms: [.iOS]))
+                ],
+               path: "BlueStackAppLovinAdapterWrapper"),
         .binaryTarget(name: "BlueStackAppLovinAdapter", path: "BlueStackAppLovinAdapter.xcframework")
     ]
 )
