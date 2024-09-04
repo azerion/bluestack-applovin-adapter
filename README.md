@@ -28,6 +28,6 @@ and run `pod install --repo-update` in you terminal.
 ### Using Swift Package Manager (SPM)
 
 - Go to the project settings and select `Package Dependencies`
-- Search for https://github.com/azerion/bluestack_mediation_adapter_iOS.git and add `BlueStackAppLovinAdapter` to your target.
+- Search for https://github.com/azerion/bluestack-applovin-adapter.git and add `BlueStackAppLovinAdapter` to your target.
 
 **Note:** Add `-ObjC` to you `Other Linker Flags` of target build settings. 
