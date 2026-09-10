@@ -1,1 +1,32 @@
-# BlueStack-AppLovin-Adapter
+BlueStack Mediation Adapers for iOS platform
+
+# BlueStackAppLovinAdapter
+
+Using BlueStackAppLovinAdapter you will be able to show AppLovin ads through BlueStack SDK. 
+
+## Supported ad formats
+- Banner
+- MREC
+- Interstitial
+- Rewarded
+
+## Requirements
+- Xcode 15.0 or higher
+- iOS: 13.0
+
+## Integrate BlueStackAppLovinAdapter in your application project
+
+### Using Cocoapods
+In the `Podfile` of your application project add `BlueStackAppLovinAdapter` dependency
+
+```shell
+pod 'BlueStackAppLovinAdapter'
+```
+and run `pod install --repo-update` in you terminal.
+
+### Using Swift Package Manager (SPM)
+
+- Go to the project settings and select `Package Dependencies`
+- Search for https://github.com/azerion/bluestack-applovin-adapter.git and add `BlueStackAppLovinAdapter` to your target.
+
+**Note:** Add `-ObjC` to you `Other Linker Flags` of target build settings. 
